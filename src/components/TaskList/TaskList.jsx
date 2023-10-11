@@ -1,10 +1,7 @@
 import { useSelector } from "react-redux";
-
 import { Task } from "../Task/Task";
+import { getTasks, getStatusFilter } from "../../redux/selectors";
 import { statusFilters } from "../../redux/constants";
-import { getTasks } from "../../redux/selectors";
-import { getStatusFilter } from "../../redux/selectors";
-
 import css from "./TaskList.module.css";
 
 const getVisibleTasks = (tasks, statusFilter) => {
@@ -25,7 +22,7 @@ export const TaskList = () => {
 
   return (
     <ul className={css.list}>
-      {visibleTasks.map((task) => (
+      {visibleTasks.map(task => (
         <li className={css.listItem} key={task.id}>
           <Task task={task} />
         </li>
