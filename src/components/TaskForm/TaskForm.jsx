@@ -8,6 +8,7 @@ export const TaskForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
+    console.log(event.target.value)
     const form = event.target;
     dispatch(addTask(form.elements.text.value));
     form.reset();
@@ -16,6 +17,12 @@ export const TaskForm = () => {
   return (
     <form className={css.form} onSubmit={handleSubmit}>
       <input
+        className={css.field}
+        type="text"
+        name="title"
+        placeholder="Enter task title..."
+      />
+       <input
         className={css.field}
         type="text"
         name="text"
