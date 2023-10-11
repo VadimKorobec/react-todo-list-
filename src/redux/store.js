@@ -3,12 +3,8 @@ import { tasksReducer } from "./tasksSlice";
 import { filtersReducer } from "./filterSlice";
 
 export const store = configureStore({
-  reducer:{
-    tasks:tasksReducer,
-    filter:filtersReducer
-  }
-})
-
-
-
-
+  reducer: {
+    tasks: tasksReducer,
+    filters: filtersReducer,
+  },
+});
